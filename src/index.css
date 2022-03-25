@@ -1,13 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(to bottom, rgba(255, 254, 254, 0.884)50%, rgba(248, 246, 247, 0.955)100%), url("/public/images/landingpage_bg.jpg");
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.landingpage_bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imgs {
+    box-shadow: 9px 12px 18px rgb(190, 189, 189);
+    overflow: hidden;
+}
+
+.imgs::after {
+    content: "hello";
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: red;
+    width: 100%;
+    height: 400px;
+}
+
+.image-blurred-edge {
+    background-image: url('/src/');
+    /* you need to match the shadow color to your background or image border for the desired effect*/
+    box-shadow: 0 0 8px 8px red inset;
+}
+
+.me {
+    position: relative;
+}
+
+.me::after {
+    content: '';
+    width: 100%;
+    z-index: 99;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 254, 254, 0.089)50%, rgb(248, 246, 247)100%);
+}
+
+.gradient_bg {
+    background: linear-gradient(to right, rgba(238, 7, 84, 1)50%, rgb(247, 6, 138)100%);
 }
